@@ -11,12 +11,12 @@ const blogPosts = [
 
 const BlogCard = () => {
   return (
-    <div className="bg-gray-100 py-10">
+    <div className="bg-gradient-to-b from-blue-700 to-blue-900 text-white py-10">
       <div className="text-center">
         <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj">
           Our Blogs
         </h2>
-        <p className="mt-4 text-md font-medium text-gray-600 font-pj mb-8">
+        <p className="mt-4 text-md font-medium text-black font-pj mb-8">
           Explore our collection of insightful articles about the beauty of Himachal Pradesh, <br />
           hiking trails, nature, and the unique stays in the region.
         </p>
