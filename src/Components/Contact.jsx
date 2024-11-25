@@ -21,7 +21,7 @@ const Contact = () => {
           <div className="container mx-auto px-6 lg:px-20 relative">
             {/* Contact Box */}
             <div className="bg-white text-gray-800 rounded-xl p-8 shadow-lg flex flex-col lg:flex-row gap-8 max-w-2xl mx-auto -mt-48">
-              
+
               {/* Contact Information */}
               <div className="lg:w-1/2 text-sm">
                 <h3 className="text-xl font-bold mb-4">Contact Information</h3>
@@ -87,3 +87,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

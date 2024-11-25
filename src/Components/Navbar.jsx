@@ -90,19 +90,22 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="absolute top-16 left-0 w-full bg-blue-700 text-white md:hidden z-50">
           <div className="flex flex-col items-center space-y-4 py-4">
-            {['Home', 'Packages', 'Services', 'Blog', 'About', 'Contact'].map(
-              (item) => (
-                <button
-                  key={item}
-                  className="hover:text-gray-300 font-semibold"
-                  onClick={() => navigate(`/${item.toLowerCase()}`)}
-                >
-                  {item}
-                </button>
-              )
-            )}
+            {['Home', 'Packages', 'Services', 'Blog', 'About', 'Contact'].map((item) => (
+              <button
+                key={item}
+                className="font-semibold hover:text-blue-500 transition"
+                onClick={() => {
+                  console.log(`Navigating to: ${item === 'Home' ? '/' : `/${item.toLowerCase()}`}`);
+                  navigate(`/${item.toLowerCase()}`);
+                }}
+              >
+                {item}
+              </button>
+            ))}
+
+
             <a
-              href="/signup"
+              href="/"
               className="hover:bg-cyan-700 hover:text-black bg-slate-100 bg-opacity-40 text-white py-2 px-4 rounded-full"
             >
               Login / Signup
