@@ -155,7 +155,7 @@ const Testimonial = () => {
                   <div className="flex items-center mt-8">
                     <img
                       className="flex-shrink-0 object-cover rounded-full w-11 h-11"
-                      src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-female-1.png"
+                      src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-female.png"
                       alt=""
                     />
                     <div className="ml-4">
