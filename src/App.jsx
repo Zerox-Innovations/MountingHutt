@@ -20,15 +20,24 @@ import Users from './Components/admin/Users/Users';
 import UserDetail from './Components/admin/Users/UserDetail';
 import NewPackage from './Components/admin/Packages/NewPackage';
 import Package from './Components/Package';
+import UserProfile from './Components/admin/Users/UserProfile';
+import BookingPage from './Components/Pages/Booking/BookingPage';
+import Checkout from './Components/Pages/Booking/Checkout';
+import BlogList from './Components/Pages/Blogs/BlogCard';
+import BlogDetailList from './Components/Pages/Blogs/BlogDetailList';
+import { Toaster } from 'react-hot-toast';
+import PaymentView from './Components/Pages/Payment/PaymentView';
+
 
 function App() {
   return (
     <div>
+      <Toaster />
       <BrowserRouter>
         <Routes>
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
-          <Route path='/home' element={<Home />} />
+          <Route path='/' element={<Home />} />
           <Route path='/services' element={<Service />} />
           <Route path='/package' element={<Package />} />
           <Route path='/package/:id' element={<PkgDetails />} />
@@ -38,21 +47,18 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/footer' element={<Footer />} />
           <Route path='/about' element={<About />} />
+          <Route path='/profile' element={<UserProfile />} />
+          <Route path="/booking/:id" element={<BookingPage />} />
+          <Route path="/booking/billinginfo" element={<Checkout />} />
+          <Route path="/payment-view" element={<PaymentView />} />
 
-
-          {/* <Route path='/' element={<Dashboard />} />  */}
-          <Route path="/" element={<Sidebar />}>
+          <Route path="/dashboard" element={<Sidebar />}>
             <Route index element={<Dashboard />} />
-            <Route path="/adminpackages" element={<Packages />} />
-            <Route path="/adminpackages/new" element={<NewPackage />} />
-            <Route path="/customers" element={<Users />} />
-            <Route path="/customers/:user_id" element={<UserDetail />} />
+            <Route path="adminpackages" element={<Packages />} />
+            <Route path="adminpackages/new" element={<NewPackage />} />
+            <Route path="customers" element={<Users />} />
+            <Route path="customers/:user_id" element={<UserDetail />} />
           </Route>
-
-          {/* <Route element={<Sidebar />}>
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/packages" element={<Packages />} />
-          </Route> */}
 
         </Routes>
       </BrowserRouter>

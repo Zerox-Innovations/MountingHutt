@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import bgImage from '../Assets/Login-bg.png';
 import TourismSection from './Tourism';
 import Testimonial from './Testimonial';
-import Blog from './BlogCard';
+import Blog from './Pages/Blogs/BlogCard';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Package from './Package';
@@ -32,7 +32,7 @@ const Home = () => {
         </div>
       </div>
       {/* <TourismSection /> */}
-      <Experience/>
+      <Experience />
       <Package />
       {/* <Testimonial /> */}
       <Blog />

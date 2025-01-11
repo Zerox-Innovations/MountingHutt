@@ -17,6 +17,8 @@ const Login = ({ isOpen, setIsOpen }) => {
     email: "",
     password: "",
   });
+  console.log(forms);
+  
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -26,15 +28,13 @@ const Login = ({ isOpen, setIsOpen }) => {
     });
   };
 
-  const serverUrl = process.env.REACT_APP_URL_SERVER;
-
-
 
 
   const handleSubmit = async (e) => {
+    
     e.preventDefault();
     try {
-      const response = await axios.post(`${serverUrl}accounts/login/`, forms, {
+      const response = await axios.post(`${process.env.REACT_APP_URL_SERVER}accounts/login/`, forms, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -53,7 +53,7 @@ const Login = ({ isOpen, setIsOpen }) => {
         if (decodedToken.is_admin) {
           navigate("/admin");
         } else {
-          navigate("/home");
+          navigate("/");
         }
       } else {
         toast.error("Login Failed: No token returned");

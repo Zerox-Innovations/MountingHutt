@@ -1,11 +1,14 @@
 import React from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import CallIcon from '@mui/icons-material/Call';
+import EmailIcon from '@mui/icons-material/Email';
 
 const Contact = () => {
   return (
     <div>
-      <div className="fixed top-10 left-0 right-0 z-10">
+      <div>
         <Navbar />
       </div>
 
@@ -17,22 +20,26 @@ const Contact = () => {
         </div>
 
         {/* White Background Section */}
-        <div className="bg-white flex-grow pt-32">
+        <div className="bg-white flex-grow pt-32 ">
           <div className="container mx-auto px-6 lg:px-20 relative">
             {/* Contact Box */}
-            <div className="bg-white text-gray-800 rounded-xl p-8 shadow-lg flex flex-col lg:flex-row gap-8 max-w-2xl mx-auto -mt-48">
+            <div className="bg-white text-gray-800 rounded-xl p-16 shadow-lg flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto -mt-48 ">
 
               {/* Contact Information */}
               <div className="lg:w-1/2 text-sm">
-                <h3 className="text-xl font-bold mb-4">Contact Information</h3>
+                <h3 className="text-xl font-bold mb-4"><LocationOnIcon className='text-blue-500 w-5 h-5 mr-2'/>Contact Information</h3>
                 <p className="font-semibold">Mouting Hutt Pvt Ltd</p>
                 <p className="mt-2 text-gray-600">
                   789 Willowbrook Lane, Suite 12B, Silver Pines Business District,
                   Rivertown Heights, States of America
                 </p>
                 <div className="mt-4">
-                  <h4 className="font-semibold text-gray-800 mb-1">For General queries</h4>
-                  <p className="text-blue-600 hover:underline">info@moutinghutt.com</p>
+                  <p className="text-blue-600 hover:underline flex items-center">
+                    <EmailIcon className="text-blue-500 w-5 h-5 mr-2" />
+                    info@mountinghutt.com
+                  </p>
+
+                  <h4 className="font-semibold text-gray-800 mb-1"><CallIcon className='text-blue-500 w-10 h-10 mr-2'/>For General queries</h4>
                   <p className="mt-1 text-gray-600">+91 98765 43210</p>
                   <p className="text-gray-600">+44 20 7946 0958</p>
                 </div>

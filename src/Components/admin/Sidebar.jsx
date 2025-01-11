@@ -66,7 +66,7 @@ const Sidebar = () => {
               <span>Packages</span>
             </a>
             <a
-              href="/adminpackages"
+              // href="/adminpackages"
               className="flex items-center gap-3 px-4 py-2.5 text-lg font-medium text-gray-900 transition-all duration-200 rounded-lg hover:text-white hover:bg-indigo-600 group no-underline"
             >
               <LogoutIcon style={{ color: 'inherit' }} />

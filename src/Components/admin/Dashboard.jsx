@@ -4,9 +4,9 @@ import { useAuth } from '../Context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
-  const { contextState } = useAuth();
-  const { authToken } = contextState;
-  const navigate = useNavigate()
+    const { contextState } = useAuth();
+    const { authToken } = contextState;
+    const navigate = useNavigate()
   const [dashboard, setDashboard] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

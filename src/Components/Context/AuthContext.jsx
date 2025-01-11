@@ -28,10 +28,28 @@ export const AuthProvider = ({ children}) => {
     }
   });
 
+  const [formData, setFormData] = useState({
+    salutation: "",
+    firstName: "",
+    lastName: "",
+    mobile: "",
+    email: "",
+  });
+
+  const updateFormData = (data) => {
+    setFormData((prevData) => {
+      const newData = { ...prevData, ...data };
+      console.log('Updated formData in context:', newData); // Ensure context is being updated
+      return newData;
+    });
+  };
+  
+  
+              
+
   const logout = () => {
     localStorage.removeItem('authToken');
     setAuthToken(null);
-    setUser(null);
   };
 
 
@@ -56,7 +74,9 @@ export const AuthProvider = ({ children}) => {
     user:user,
     logout:logout,
     fetchPackages:fetchPackages,
-    packages:packages
+    packages:packages,
+    formData:formData,
+    updateFormData:updateFormData
   };
 
     return (
